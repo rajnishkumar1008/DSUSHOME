@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /blog/tag/
+Disallow: /blog/category/
+
+
+
+Sitemap: https://www.dynamicssquare.com/sitemap.xml
+
