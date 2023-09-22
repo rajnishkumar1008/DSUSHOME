@@ -1,13 +1,38 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState ,useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, FreeMode } from "swiper";
 
+
+
 export default function Home() {
+  
+  const [isHovered, setIsHovered] = useState(false);
+  const [transformStyle, setTransformStyle] = useState("");
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const calculateTransform = (x, y) => {
+    const xAxis = (window.innerWidth / 2 - x) / 25;
+    const yAxis = (window.innerHeight / 2 - y) / 25;
+    return `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  };
+
+  const handleMouseMove = (e) => {
+    const transform = calculateTransform(e.clientX, e.clientY);
+    setTransformStyle(transform);
+  };
+
   return (
     <>
       <Head>
@@ -159,7 +184,7 @@ export default function Home() {
 
             <div className="col-lg-9">
               <div className="new-sub-heading">
-                <h2>Get Unmatched Services <br /> from Dynamics Square</h2>
+                <h2>Get Unmatched Services from Dynamics Square</h2>
                 <p>Drive your business success by implementing tailored and powerful innovative solutions for all industries.</p>
               </div>
             </div>
@@ -443,8 +468,7 @@ export default function Home() {
           <div className="row justify-content-center">
             <div className="col-lg-9">
               <div className="new-sub-heading">
-                <h2>Why Businesses <br />
-                  Trust Dynamics Square?</h2>
+                <h2>Why Businesses Trust Dynamics Square?</h2>
                 <p>Dynamis Square is the leading Microsoft Dynamics 365 partner, offering future-ready business solutions to global organizations.</p>
               </div>
             </div>
@@ -738,7 +762,9 @@ Marketing</h3>
             </div>
           </div>
 
-          <div className='mas'>
+          <div className='mas cardss'  
+          
+          >
             <div className="bb">
               <img src="/img/home/Group-3.png" alt="im" />
               <img src="/img/home/Group-2.png" alt="im" />
@@ -791,14 +817,14 @@ Marketing</h3>
                   <a href="/" className="btnnew">Read More</a>
                 </div>
                 <div className="bottom-sec">
-                  <img src="/img/contactfor-sede-img.jpg" alt="im " />
+                  <img src="/img/home/roi.png" alt="im " />
                 </div>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="exp-box">
                 <div className="bottom-sec b-t-pad">
-                  <img src="/img/contactfor-sede-img.jpg" alt="im " />
+                  <img src="/img/home/2x.png" alt="im " />
                 </div>
                 <div className="top-sec ">
                   <h3>2x</h3>
@@ -818,7 +844,7 @@ Marketing</h3>
                   <a href="/" className="btnnew">Read More</a>
                 </div>
                 <div className="bottom-sec">
-                  <img src="/img/contactfor-sede-img.jpg" alt="im " />
+                  <img src="/img/home/46x.jpg" alt="im" />
                 </div>
               </div>
             </div>
