@@ -9500,6 +9500,9 @@ section {
   .exp-box .top-sec {
     height: 330px;
 }
+.new-sub-heading h2 {
+  font-size: 42px;
+}
 }
 
 /*old media*/
