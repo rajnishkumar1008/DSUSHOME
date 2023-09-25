@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, FreeMode } from "swiper";
+import Type from "../components/type";
+import Card from "../components/Crads";
+import CardVideo from "../components/Cradsvideo";
 
 
 
@@ -101,7 +104,18 @@ export default function Home() {
                   {/* <video autoPlay muted loop>
                     <source src="/video/DS-banner-video.mp4"></source>
                   </video> */}
-                  <div className="video pulse">  <img src="/video/banner-video-ds.svg" alt="" /></div>
+                  <div className="video pulse" 
+                  
+                 
+                  
+                  >  
+                  <CardVideo />
+                  
+                  {/* <img src="/video/banner-video-ds.svg" alt="" /> */}
+                  
+                 
+                  </div>
+                  {/* <Type /> */}
                   <div className="over-ima">
                     <img src="/img/hand-icons.png" alt="image" />
                   </div>
@@ -762,43 +776,14 @@ Marketing</h3>
             </div>
           </div>
           <div className="inner-pic">
-          <img src="/img/home/hover-servece.png" alt="im" />
+          {/* <img src="/img/home/hover-servece.png" alt="im" /> */}
+           <Card />
           </div>
-{/* 
-          <div className='mas cardss'  
-          
-          >
-            <div className="bb pulse">
-              <img src="/img/home/hover-servece.png" alt="im" />
-             
-            </div>
-            <img src='/img/mascut.png' alt='' />
-          </div> */}
+
         </div>
 
       </div>
 
-      {/* <section class="outter hero-video">
-<section class="video-container">
-  <video src="/video/masscot-background.mp4" autoPlay loop playsinline muted></video>
-  <div class="callout">
-    <h1>STORE &amp; SAVE MORE<br />FOOD THAN EVER BEFORE</h1>
-    <div class="desc">An optional description</div>
-    <a class="button" href="/collections/all">SHOP ABEEGO FOOD WRAPS</a>
-    
-  </div>
-  
-  <div className='mas'>
-  <div className="bb">
-            <img src="/img/home/Group-3.png" alt="im" />
-            <img src="/img/home/Group-2.png" alt="im" />
-            <img src="/img/home/Group-4.png" alt="im" />
-            <img src="/img/home/Group-1.png" alt="im" />
-          </div>
-  <img src='/img/mascut.png' alt='' />
-    </div>
-</section>
-</section> */}
       <section className="pddd-80">
         <div className="container">
           <div className="row justify-content-center">
@@ -884,7 +869,7 @@ Marketing</h3>
           </div>
         </div>
     </section>
-
+       
     </>
   );
 }

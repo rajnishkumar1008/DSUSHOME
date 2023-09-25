@@ -8769,7 +8769,8 @@ section {
   color: #f2f8fe;
   font-weight: normal;
   margin-bottom: 40px;
-  ont-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  white-space: break-spaces;
 }
 .new-btn-home .bts {
 }
@@ -8807,15 +8808,35 @@ section {
 
 .home-into-video-title {
   position: relative;
+  /* -webkit-perspective: 1000px;
+  perspective: 1000px; */
+  transition: all 0.75s ease-out;
 }
 .home-into-video-title .main-v {
+
 }
 .home-into-video-title .main-v .video {
   width: 100%;
   mix-blend-mode: screen;
   position: relative;
   z-index: 2;
+  transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -webkit-transition: transform .5s ease-in-out;
+   
+
 }
+.home-into-video-title .main-v .video video{
+  transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -webkit-transition: transform .5s ease-in-out;
+    transform: scale(1);
+    width:100%
+}
+.home-into-video-title .main-v:hover .video{
+  transform: scale(1.07);
+}
+
 .home-into-video-title .main-v img {
   width: 100%;
   mix-blend-mode: screen;
@@ -8824,11 +8845,11 @@ section {
 }
 .home-into-video-title .main-v .over-ima {
   position: absolute;
-  bottom: -160px;
-  width: 100%;
-  text-align: center;
-  left: -50px;
-  z-index: 1;
+    bottom: -160px;
+    width: 100%;
+    text-align: center;
+    left: -48px;
+    z-index: 1;
 }
 .home-into-video-title .main-v .over-ima img {
   width: 32%;
@@ -9452,39 +9473,128 @@ section {
 } */
 
 
+.type_asd{
+  position: absolute;
+  top: 27px;
+}
+.text-ee {
+  color: white;
+  font-size: 55px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
 
+.text-ee  .iam {
+  color: white;
+  font-size: 55px;
+  padding: 15px;
+  font-family: sans-serif;
+}
 
+.text-ee  .typingText {
 
+  /* border-right: 2px solid red; */
+  font-size: 24px;
 
+  color: white;
+  /* mix-blend-mode: multiply; */
+}
 
+.cardnew {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  /* background: url('https://dsushome.vercel.app/img/home/hover-servece.png') no-repeat;
+    background-size: cover; */
 
+  text-transform: uppercase;
+  color: rgba(240 240 240 / 0.7);
 
+  /* border-radius: 20px;
+  background-image: linear-gradient(
+    150deg,
+    rgba(255 255 255 / 40%) 0%,
+    rgba(255 255 255 / 10%) 100%
+  );
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 24px -1px rgba(0 0 0 / 10%); */
 
+  transition: transform 0.2s ease-out;
+  will-change: transform;
 
+/*   animation-name: spin; */
+  animation-timing-function: linear;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
 
-
-
-.svg-triangle {
-  /*   border: 1px solid gray; */
+@keyframes move {
+  0% {
+    transform: perspective(1000px) scale(1.05) rotateX(var(--main-angle))
+      rotateY(calc(var(--main-angle) * -1));
   }
-  
-  .svg-triangle path {
-    stroke-width: 5;
-    stroke: black;
+
+  12.5% {
+    transform: perspective(1000px) scale(1.05) rotateX(var(--secondary-angle))
+      rotateY(0);
   }
-  .pair {
-    display: inline-block;
-    text-align: center;
-    width: 24%
+
+  25% {
+    transform: perspective(1000px) scale(1.05) rotateX(var(--main-angle))
+      rotateY(var(--main-angle));
   }
-  
-  .explanation {
-    display: block;
-    width: 100%
+
+  37.5% {
+    transform: perspective(1000px) scale(1.05) rotateX(0)
+      rotateY(var(--secondary-angle));
   }
+
+  50% {
+    transform: perspective(1000px) scale(1.05)
+      rotateX(calc(var(--main-angle) * -1)) rotateY(var(--main-angle));
+  }
+
+  62.5% {
+    transform: perspective(1000px) scale(1.05)
+      rotateX(calc(var(--secondary-angle) * -1)) rotateY(0);
+  }
+
+  75% {
+    transform: perspective(1000px) scale(1.05)
+      rotateX(calc(var(--main-angle) * -1))
+      rotateY(calc(var(--main-angle) * -1));
+  }
+
+  87.5% {
+    transform: perspective(1000px) scale(1.05) rotateX(0)
+      rotateY(calc(var(--secondary-angle) * -1));
+  }
+
+  100% {
+    transform: perspective(1000px) scale(1.05) rotateX(var(--main-angle))
+      rotateY(calc(var(--main-angle) * -1));
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: perspective(1000px) scale(1.05) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) scale(1.05) rotateY(360deg);
+  }
+}
+
+
+
 
 /*new home media*/
 @media (max-width: 1400px) {
+  .home-into-video-title .main-v .over-ima{
+    bottom: -147px;
+  }
   .vie .new{
     top: 5vh;
   }
