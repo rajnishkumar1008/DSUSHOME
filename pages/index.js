@@ -101,7 +101,7 @@ export default function Home() {
                   {/* <video autoPlay muted loop>
                     <source src="/video/DS-banner-video.mp4"></source>
                   </video> */}
-                  <div className="video">  <img src="/video/banner-video-ds.svg" alt="" /></div>
+                  <div className="video pulse">  <img src="/video/banner-video-ds.svg" alt="" /></div>
                   <div className="over-ima">
                     <img src="/img/hand-icons.png" alt="image" />
                   </div>
@@ -761,18 +761,19 @@ Marketing</h3>
               </Link>
             </div>
           </div>
-
+          <div className="inner-pic">
+          <img src="/img/home/hover-servece.png" alt="im" />
+          </div>
+{/* 
           <div className='mas cardss'  
           
           >
-            <div className="bb">
-              <img src="/img/home/Group-3.png" alt="im" />
-              <img src="/img/home/Group-2.png" alt="im" />
-              <img src="/img/home/Group-4.png" alt="im" />
-              <img src="/img/home/Group-1.png" alt="im" />
+            <div className="bb pulse">
+              <img src="/img/home/hover-servece.png" alt="im" />
+             
             </div>
             <img src='/img/mascut.png' alt='' />
-          </div>
+          </div> */}
         </div>
 
       </div>
